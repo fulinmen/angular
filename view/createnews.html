@@ -1,0 +1,43 @@
+<div class="app-create-news">
+	<div class="main-inner">
+		<h2>发布新闻</h2>
+		<form name="news_form" ng-submit="submit()">
+			<div class="row">
+				<div class="col-lg-2">
+					<label for="news_title">新闻标题</label>
+					
+				</div>
+				<div class="col-lg-6">
+					<input type="text" ng-model="news.newsTitle" name="newsTitle" required class="form-control" placeholder="请输入新闻标题">
+				</div>
+				<div class="col-lg-4">
+					<span ng-show="news_form.newsTitle.$dirty && new_form.newsTitle.$invalid">请输入新闻标题</span>
+				</div>
+			</div>
+			<div class="row">
+				<dov class="col-lg-2">
+					<label for="new_writer">新闻作者</label>
+				</dov>
+				<div class="col-lg-6">
+					<input type="text" class="form-control" id="news_writer" name="newsWriter" ng-model="news.newsWriter" required placeholder="请输入新闻的作者">
+				</div>
+				<div class="col-lg-4">
+					<span ng-show="new_form.newsWriter.$dirty && new_form.newsWriter.$invalid">请输入新闻的作者</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-2">
+					<label for="name_content">新闻内容</label>
+				</div>
+				<div class="col-lg-6">
+					<textarea class="form-control" id="name_content" ng-model="news.newsContent" required placeholder="请输入新闻内容"></textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-offset-2 col-lg-6">
+					<button type="submit" ng-disabled="news_form.$invalid" class="btn btn-success">提交</button>
+				</div>
+			</div>
+		</form>	
+	</div>
+</div>
